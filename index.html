@@ -6,55 +6,53 @@
     <title>ruisha4379 | Policy & Research Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { background-color: #f9fafb; }
+        body { background-color: #f9fafb; scroll-behavior: smooth; }
         .hero-gradient { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); }
-    </script>
+        .card-hover:hover { transform: translateY(-5px); transition: all 0.3s ease; }
+    </style>
 </head>
 <body class="font-sans text-gray-900">
 
-    <nav class="p-6 bg-white shadow-sm flex justify-between items-center">
-        <span class="text-xl font-bold tracking-tight text-blue-900">4379.github.io</span>
+    <nav class="sticky top-0 z-50 p-6 bg-white/90 backdrop-blur-md shadow-sm flex justify-between items-center">
+        <span class="text-xl font-bold tracking-tight text-blue-900">ruisha4379</span>
         <div class="space-x-6">
-            <a href="#about" class="hover:text-blue-600">About</a>
-            <a href="#experience" class="hover:text-blue-600">Experience</a>
-            <a href="#contact" class="px-4 py-2 bg-blue-900 text-white rounded-lg">Contact</a>
+            <a href="#about" class="text-gray-600 hover:text-blue-600 font-medium">About</a>
+            <a href="#experience" class="text-gray-600 hover:text-blue-600 font-medium">Experience</a>
+            <a href="#contact" class="px-4 py-2 bg-blue-900 text-white rounded-lg hover:bg-blue-800 transition">Contact</a>
         </div>
     </nav>
 
-    <header class="hero-gradient text-white py-20 px-6 text-center">
-        <h1 class="text-4xl md:text-5xl font-extrabold mb-4">PhD Researcher & Energy Policy Expert</h1>
-        <p class="text-xl opacity-90 max-w-2xl mx-auto">Bridging Mechanical Engineering R&D with National Strategic Planning and Energy Economics.</p>
+    <header class="hero-gradient text-white py-24 px-6 text-center">
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight">PhD Researcher & Energy Policy Expert</h1>
+        <p class="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto leading-relaxed">
+            Bridging Mechanical Engineering R&D with National Strategic Planning and Energy Economics.
+        </p>
     </header>
 
-    <main class="max-w-5xl mx-auto py-12 px-6">
+    <main class="max-w-5xl mx-auto py-16 px-6">
         
-        <section id="experience" class="grid md:grid-cols-3 gap-8 mb-16">
-            <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-blue-600">
-                <h3 class="font-bold text-lg mb-2">Policy & Strategy</h3>
-                <p class="text-gray-600 text-sm">Expertise in Energy Master Plans, Governance, and Inter-agency coordination (EMA/MTI).</p>
+        <section id="experience" class="grid md:grid-cols-3 gap-8 mb-20">
+            <div class="bg-white p-8 rounded-2xl shadow-sm border-t-4 border-blue-600 card-hover">
+                <div class="text-blue-600 mb-4 font-bold uppercase tracking-widest text-xs">Strategy</div>
+                <h3 class="font-bold text-xl mb-3 text-blue-900">Policy & Strategy</h3>
+                <p class="text-gray-600 leading-relaxed">Expertise in Energy Master Plans, Governance, and Inter-agency coordination at the national level.</p>
             </div>
-            <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-green-600">
-                <h3 class="font-bold text-lg mb-2">Academic R&D</h3>
-                <p class="text-gray-600 text-sm">PhD in Mechanical Engineering. Focus on Renewable Energy, Thermal Systems, and Modeling.</p>
+            
+            <div class="bg-white p-8 rounded-2xl shadow-sm border-t-4 border-green-600 card-hover">
+                <div class="text-green-600 mb-4 font-bold uppercase tracking-widest text-xs">Academic</div>
+                <h3 class="font-bold text-xl mb-3 text-blue-900">Academic R&D</h3>
+                <p class="text-gray-600 leading-relaxed">PhD in Mechanical Engineering focused on Renewable Energy, Thermal Systems, and Sustainable Modeling.</p>
             </div>
-            <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-purple-600">
-                <h3 class="font-bold text-lg mb-2">Data & Tech</h3>
-                <p class="text-gray-600 text-sm">Technical proficiency in Python, ML, and Data Analytics for Energy Systems.</p>
+
+            <div class="bg-white p-8 rounded-2xl shadow-sm border-t-4 border-purple-600 card-hover">
+                <div class="text-purple-600 mb-4 font-bold uppercase tracking-widest text-xs">Technical</div>
+                <h3 class="font-bold text-xl mb-3 text-blue-900">Data & Tech</h3>
+                <p class="text-gray-600 leading-relaxed">Proficiency in Python, ML, and Analytics for energy system optimization and forecasting.</p>
             </div>
         </section>
 
-        <section id="about" class="prose max-w-none mb-16">
-            <h2 class="text-3xl font-bold mb-4 text-blue-900">About Me</h2>
-            <p class="text-lg text-gray-700 leading-relaxed">
-                With over 10 years of experience spanning across academia and government policy, I specialize in navigating the complexities of the energy transition... [Click 'Edit' to add your personal story here!]
-            </p>
-        </section>
-
-    </main>
-
-    <footer class="bg-gray-100 py-8 text-center text-gray-500 text-sm">
-        &copy; 2026 | Built with GitHub Pages & AI
-    </footer>
-
-</body>
-</html>
+        <section id="about" class="mb-20 bg-blue-50 p-10 rounded-3xl">
+            <h2 class="text-3xl font-bold mb-6 text-blue-900">About Me</h2>
+            <div class="prose max-w-none text-gray-700 text-lg leading-relaxed">
+                <p>
+                    With over 10 years of experience spanning across academia and government policy, I specialize in navigating

@@ -1,60 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Sai's page | Policy & Research Portfolio</title>
-    <meta property="og:title" content="Dr. Sai's page | Policy & Research Portfolio">
-    <meta name="twitter:title" content="Dr. Sai's page | Policy & Research Portfolio">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body { background-color: #f9fafb; scroll-behavior: smooth; }
-        .hero-gradient { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); }
-        .card-hover:hover { transform: translateY(-5px); transition: all 0.3s ease; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dr. Sai's page | Policy & Research Portfolio</title>
+  <meta property="og:title" content="Dr. Sai's page | Policy & Research Portfolio" />
+  <meta name="twitter:title" content="Dr. Sai's page | Policy & Research Portfolio" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background-color: #f8fafc;
+      scroll-behavior: smooth;
+    }
+
+    .hero-gradient {
+      background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 60%, #0ea5e9 100%);
+    }
+
+    .timeline-line::before {
+      content: "";
+      position: absolute;
+      left: 0.625rem;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: #bfdbfe;
+    }
+
+    @media (max-width: 768px) {
+      .timeline-line::before {
+        left: 0.5rem;
+      }
+    }
+  </style>
 </head>
-<body class="font-sans text-gray-900">
+<body class="font-sans text-slate-900">
+  <nav class="sticky top-0 z-50 border-b border-slate-200 bg-white/90 px-4 py-4 backdrop-blur md:px-8">
+    <div class="mx-auto flex w-full max-w-6xl items-center justify-between">
+      <span class="text-lg font-bold tracking-tight text-blue-900 md:text-xl">Dr. Sai's page</span>
+      <div class="flex items-center gap-3 md:gap-6">
+        <a href="#about" class="text-sm font-medium text-slate-600 hover:text-blue-600 md:text-base">About</a>
+        <a href="#experience" class="text-sm font-medium text-slate-600 hover:text-blue-600 md:text-base">Experience</a>
+        <a href="#contact" class="rounded-lg bg-blue-900 px-3 py-2 text-sm font-medium text-white transition hover:bg-blue-800 md:px-4 md:text-base">Contact</a>
+      </div>
+    </div>
+  </nav>
 
-    <nav class="sticky top-0 z-50 p-6 bg-white/90 backdrop-blur-md shadow-sm flex justify-between items-center">
-        <span class="text-xl font-bold tracking-tight text-blue-900">Dr. Sai's page</span>
-        <div class="space-x-6">
-            <a href="#about" class="text-gray-600 hover:text-blue-600 font-medium">About</a>
-            <a href="#experience" class="text-gray-600 hover:text-blue-600 font-medium">Experience</a>
-            <a href="#contact" class="px-4 py-2 bg-blue-900 text-white rounded-lg hover:bg-blue-800 transition">Contact</a>
+  <header class="hero-gradient px-6 py-20 text-center text-white md:py-24">
+    <h1 class="mx-auto mb-4 max-w-4xl text-3xl font-extrabold tracking-tight md:text-6xl">PhD Researcher, AI Practitioner & Energy Policy Strategist</h1>
+    <p class="mx-auto max-w-3xl text-base leading-relaxed opacity-95 md:text-xl">
+      Bridging technical algorithm development with long-term national planning through evidence-based modeling, responsible AI, and strategic governance.
+    </p>
+  </header>
+
+  <main class="mx-auto max-w-6xl px-4 py-12 md:px-8 md:py-16">
+    <section id="about" class="mb-14 rounded-3xl bg-blue-50 p-6 md:mb-20 md:p-10">
+      <h2 class="mb-4 text-2xl font-bold text-blue-900 md:text-3xl">Professional Summary</h2>
+      <p class="text-base leading-relaxed text-slate-700 md:text-lg">
+        PhD-qualified researcher and public officer with 10+ years of experience across policy planning, AI/ML modeling, and energy-sector innovation.
+        Recognized for translating technical insights into actionable strategy, including long-range energy pathway modeling, regulatory design, and
+        multi-stakeholder implementation.
+      </p>
+    </section>
+
+    <section id="experience" class="mb-14 md:mb-20">
+      <div class="mb-6 flex flex-col justify-between gap-4 md:mb-8 md:flex-row md:items-end">
+        <div>
+          <h2 class="text-2xl font-bold text-blue-900 md:text-3xl">Experience</h2>
+          <p class="mt-2 text-slate-600">Explore policy leadership, research depth, and technical delivery in three focused views.</p>
         </div>
-    </nav>
+      </div>
 
-    <header class="hero-gradient text-white py-24 px-6 text-center">
-        <h1 class="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight">PhD Researcher & Energy Policy Expert</h1>
-        <p class="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto leading-relaxed">
-            Bridging Mechanical Engineering R&D with National Strategic Planning and Energy Economics.
-        </p>
-    </header>
+      <div class="rounded-2xl border border-slate-200 bg-white p-3 shadow-sm md:p-4">
+        <div class="grid grid-cols-1 gap-2 md:grid-cols-3" role="tablist" aria-label="Experience tabs">
+          <button
+            class="experience-tab w-full rounded-xl border border-blue-100 bg-blue-50 px-4 py-3 text-left text-sm font-semibold text-blue-900 transition hover:bg-blue-100"
+            data-tab="professional"
+            id="tab-professional"
+            role="tab"
+            aria-controls="panel-professional"
+            aria-selected="true"
+          >
+            Professional Experience
+          </button>
+          <button
+            class="experience-tab w-full rounded-xl border border-transparent px-4 py-3 text-left text-sm font-semibold text-slate-600 transition hover:bg-slate-100"
+            data-tab="research"
+            id="tab-research"
+            role="tab"
+            aria-controls="panel-research"
+            aria-selected="false"
+          >
+            Research & Academia
+          </button>
+          <button
+            class="experience-tab w-full rounded-xl border border-transparent px-4 py-3 text-left text-sm font-semibold text-slate-600 transition hover:bg-slate-100"
+            data-tab="portfolio"
+            id="tab-portfolio"
+            role="tab"
+            aria-controls="panel-portfolio"
+            aria-selected="false"
+          >
+            Technical Portfolio
+          </button>
+        </div>
 
-    <main class="max-w-5xl mx-auto py-16 px-6">
-        
-        <section id="experience" class="grid md:grid-cols-3 gap-8 mb-20">
-            <div class="bg-white p-8 rounded-2xl shadow-sm border-t-4 border-blue-600 card-hover">
-                <div class="text-blue-600 mb-4 font-bold uppercase tracking-widest text-xs">Strategy</div>
-                <h3 class="font-bold text-xl mb-3 text-blue-900">Policy & Strategy</h3>
-                <p class="text-gray-600 leading-relaxed">Expertise in Energy Master Plans, Governance, and Inter-agency coordination at the national level.</p>
+        <div class="mt-6">
+          <article id="panel-professional" class="experience-panel" role="tabpanel" aria-labelledby="tab-professional">
+            <div class="timeline-line relative pl-8 md:pl-10">
+              <div class="mb-8">
+                <span class="absolute left-[0.25rem] mt-1.5 h-3 w-3 rounded-full bg-blue-600 ring-4 ring-blue-100"></span>
+                <p class="text-sm font-semibold text-blue-700">Jan 2024 – Present</p>
+                <h3 class="mt-1 text-xl font-bold text-slate-900">Principal Analyst (Policy & Planning)</h3>
+                <p class="mt-2 text-slate-700">National power-sector regulator, Singapore</p>
+                <ul class="mt-3 list-disc space-y-2 pl-5 text-slate-700">
+                  <li>Spearheaded scenario-based modeling for long-term national energy pathways toward 2050.</li>
+                  <li>Led development of a major emissions standards code to support decarbonization and generation efficiency.</li>
+                  <li>Designed governance architecture for a multi-billion-dollar future energy fund to strengthen strategic oversight.</li>
+                </ul>
+              </div>
+
+              <div class="mb-8">
+                <span class="absolute left-[0.25rem] mt-1.5 h-3 w-3 rounded-full bg-blue-600 ring-4 ring-blue-100"></span>
+                <p class="text-sm font-semibold text-blue-700">Aug 2022 – Dec 2023</p>
+                <h3 class="mt-1 text-xl font-bold text-slate-900">Senior Software Engineer</h3>
+                <p class="mt-2 text-slate-700">Global electronics and smart energy solutions manufacturer, Singapore</p>
+                <ul class="mt-3 list-disc space-y-2 pl-5 text-slate-700">
+                  <li>Directed optimization algorithm development for virtual power plant dispatch and market bidding workflows.</li>
+                  <li>Served as lead inventor for two patents in autonomous bidding and cloud-enabled anomaly detection systems.</li>
+                  <li>Oversaw end-to-end product integration of optimization logic into cloud deployment pipelines.</li>
+                </ul>
+              </div>
+
+              <div>
+                <span class="absolute left-[0.25rem] mt-1.5 h-3 w-3 rounded-full bg-blue-600 ring-4 ring-blue-100"></span>
+                <p class="text-sm font-semibold text-blue-700">Sep 2020 – Aug 2022</p>
+                <h3 class="mt-1 text-xl font-bold text-slate-900">Research Fellow / Researcher</h3>
+                <p class="mt-2 text-slate-700">Energy innovation institute at a leading research university, Singapore</p>
+                <ul class="mt-3 list-disc space-y-2 pl-5 text-slate-700">
+                  <li>Built machine learning forecasting models for wholesale electricity and ancillary service prices.</li>
+                  <li>Collaborated with public and private stakeholders to validate models for early virtual power plant pilots.</li>
+                </ul>
+              </div>
             </div>
-            
-            <div class="bg-white p-8 rounded-2xl shadow-sm border-t-4 border-green-600 card-hover">
-                <div class="text-green-600 mb-4 font-bold uppercase tracking-widest text-xs">Academic</div>
-                <h3 class="font-bold text-xl mb-3 text-blue-900">Academic R&D</h3>
-                <p class="text-gray-600 leading-relaxed">PhD in Mechanical Engineering focused on Renewable Energy, Thermal Systems, and Sustainable Modeling.</p>
-            </div>
+          </article>
 
-            <div class="bg-white p-8 rounded-2xl shadow-sm border-t-4 border-purple-600 card-hover">
-                <div class="text-purple-600 mb-4 font-bold uppercase tracking-widest text-xs">Technical</div>
-                <h3 class="font-bold text-xl mb-3 text-blue-900">Data & Tech</h3>
-                <p class="text-gray-600 leading-relaxed">Proficiency in Python, ML, and Analytics for energy system optimization and forecasting.</p>
-            </div>
-        </section>
+          <article id="panel-research" class="experience-panel hidden" role="tabpanel" aria-labelledby="tab-research">
+            <div class="grid gap-6 md:grid-cols-2">
+              <div class="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+                <h3 class="text-lg font-bold text-slate-900">Doctoral Research</h3>
+                <p class="mt-3 text-slate-700">Ph.D. in interdisciplinary engineering research with a focus on mechanical systems, fatigue analysis, and renewable energy applications.</p>
+                <ul class="mt-3 list-disc space-y-2 pl-5 text-slate-700">
+                  <li>Modeled lifespan of composite wind turbine blade materials using machine learning and classical mathematical methods.</li>
+                  <li>Integrated data-driven and physics-informed approaches for robust material performance prediction.</li>
+                  <li>Awarded a competitive presidential graduate scholarship.</li>
+                </ul>
+              </div>
 
-        <section id="about" class="mb-20 bg-blue-50 p-10 rounded-3xl">
-            <h2 class="text-3xl font-bold mb-6 text-blue-900">About Me</h2>
-            <div class="prose max-w-none text-gray-700 text-lg leading-relaxed">
-                <p>
-                    With over 10 years of experience spanning across academia and government policy, I specialize in navigating
+              <div class="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+                <h3 class="text-lg font-bold text-slate-900">Academic Contributions</h3>
+                <ul class="mt-3 list-disc space-y-2 pl-5 text-slate-700">
+                  <li>Published peer-reviewed research on event-driven forecasting of electricity and regulation prices using ML methods.</li>
+                  <li>Published work on fatigue life prediction for fiber-metal laminates relevant to small wind turbine systems.</li>
+                  <li>Contributed to translational research recognized by academic and media channels.</li>
+                </ul>
+              </div>
+
+              <div class="rounded-2xl border border-slate-200 bg-slate-50 p-5 md:col-span-2">
+                <h3 class="text-lg font-bold text-slate-900">Academic Foundation</h3>
+                <p class="mt-3 text-slate-700">First Class Honours in Mechanical & Aerospace Engineering, supported by book prize recognition and dean’s list distinctions.</p>
+              </div>
+            </div>
+          </article>
+
+          <article id="panel-portfolio" class="experience-panel hidden" role="tabpanel" aria-labelledby="tab-portfolio">
+            <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+              <section class="rounded-2xl border border-slate-200 p-5">
+                <h3 class="text-sm font-bold uppercase tracking-wider text-blue-700">AI & Machine Learning</h3>
+                <ul class="mt-3 list-disc space-y-2 pl-5 text-slate-700">
+                  <li>Supervised/unsupervised models: XGBoost, LightGBM, Random Forests</li>
+                  <li>Deep learning: Transformers, CNNs, LSTMs, Graph Neural Networks</li>
+                  <li>Reinforcement learning: PPO</li>
+                </ul>
+              </section>
+
+              <section class="rounded-2xl border border-slate-200 p-5">
+                <h3 class="text-sm font-bold uppercase tracking-wider text-blue-700">Modeling & Optimization</h3>
+                <ul class="mt-3 list-disc space-y-2 pl-5 text-slate-700">
+                  <li>Large language model workflows and agentic AI implementation</li>
+                  <li>Optimization frameworks with Pyomo and stochastic process modeling</li>
+                  <li>Time-series forecasting for energy and industrial systems</li>
+                </ul>
+              </section>
+
+              <section class="rounded-2xl border border-slate-200 p-5">
+                <h3 class="text-sm font-bold uppercase tracking-wider text-blue-700">Engineering Applications</h3>
+                <ul class="mt-3 list-disc space-y-2 pl-5 text-slate-700">
+                  <li>Virtual power plant dispatch, bidding strategy, and decision engines</li>
+                  <li>Industrial IoT anomaly detection and predictive maintenance</li>
+                  <li>Scenario-driven policy and strategic planning for energy transition</li>
+                </ul>
+              </section>
+
+              <section class="rounded-2xl border border-slate-200 p-5">
+                <h3 class="text-sm font-bold uppercase tracking-wider text-blue-700">Data Science Stack</h3>
+                <p class="mt-3 text-slate-700">Python, PyTorch, scikit-learn, Polars, pandas, NumPy, and AWS SageMaker for model development and deployment.</p>
+              </section>
+
+              <section class="rounded-2xl border border-slate-200 p-5 xl:col-span-2">
+                <h3 class="text-sm font-bold uppercase tracking-wider text-blue-700">Selected IP & Publications</h3>
+                <ul class="mt-3 list-disc space-y-2 pl-5 text-slate-700">
+                  <li>Lead inventor on two 2023 patents related to VPP trading and cloud-enabled microgrid intelligence.</li>
+                  <li>Publications spanning electricity market forecasting and materials fatigue prediction for renewable systems.</li>
+                </ul>
+              </section>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="rounded-3xl border border-slate-200 bg-white p-6 md:p-8">
+      <h2 class="text-2xl font-bold text-blue-900 md:text-3xl">Contact</h2>
+      <div class="mt-4 grid gap-4 text-slate-700 md:grid-cols-2">
+        <p><span class="font-semibold">Location:</span> Singapore</p>
+        <p><span class="font-semibold">Email:</span> your.email@example.com</p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const tabs = document.querySelectorAll('.experience-tab');
+    const panels = document.querySelectorAll('.experience-panel');
+
+    function activateTab(tabKey) {
+      tabs.forEach((tab) => {
+        const isActive = tab.dataset.tab === tabKey;
+        tab.classList.toggle('bg-blue-50', isActive);
+        tab.classList.toggle('border-blue-100', isActive);
+        tab.classList.toggle('text-blue-900', isActive);
+        tab.classList.toggle('border-transparent', !isActive);
+        tab.classList.toggle('text-slate-600', !isActive);
+        tab.setAttribute('aria-selected', String(isActive));
+      });
+
+      panels.forEach((panel) => {
+        const isActive = panel.id === `panel-${tabKey}`;
+        panel.classList.toggle('hidden', !isActive);
+      });
+    }
+
+    tabs.forEach((tab) => {
+      tab.addEventListener('click', () => activateTab(tab.dataset.tab));
+    });
+  </script>
+</body>
+</html>

@@ -13,6 +13,9 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
 
       - name: Generate update using OpenAI API
         env:
@@ -28,14 +31,22 @@ jobs:
 
           echo "$RESPONSE" > response.json
 
-      - name: Apply update to file
+      - name: Extract AI content and update blog
         run: |
-          echo "AI output saved. You can later parse and insert into blog.md or index.html"
+          CONTENT=$(cat response.json | jq -r '.output[0].content[0].text')
+
+          echo "## New AI Generated Post" >> blog.md
+          echo "" >> blog.md
+          echo "$CONTENT" >> blog.md
+          echo "" >> blog.md
 
       - name: Commit changes
         run: |
           git config user.name "ai-bot"
           git config user.email "ai-bot@users.noreply.github.com"
-          git add .
-          git commit -m "AI update" || echo "No changes"
-          git push
+
+          git add blog.md response.json
+
+          git commit -m "AI update: add new blog section" || echo "No changes to commit"
+
+          git push origin HEAD

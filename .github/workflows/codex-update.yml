@@ -1,37 +1,41 @@
-name: Codex Auto Content Update
+name: Auto Update Website with AI
 
 on:
-  schedule:
-    - cron: "0 2 * * *"   # runs daily
-  workflow_dispatch:      # allows manual run
+  workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  update-site:
+  update:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Run Codex
-        uses: openai/codex-action@v1
-        with:
-          openai-api-key: ${{ secrets.OPENAI_API_KEY }}
-          prompt: |
-            You are updating a personal website.
+      - name: Generate update using OpenAI API
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          RESPONSE=$(curl -s https://api.openai.com/v1/responses \
+            -H "Content-Type: application/json" \
+            -H "Authorization: Bearer $OPENAI_API_KEY" \
+            -d '{
+              "model": "gpt-4.1-mini",
+              "input": "You are updating a personal website. Write a short new blog section about energy systems or AI in energy policy. Keep it concise."
+            }')
 
-            TASK:
-            - Improve or add a small update to the homepage or blog
-            - Keep it professional and concise
-            - Do not break layout or styling
+          echo "$RESPONSE" > response.json
+
+      - name: Apply update to file
+        run: |
+          echo "AI output saved. You can later parse and insert into blog.md or index.html"
 
       - name: Commit changes
         run: |
-          git config user.name "codex-bot"
-          git config user.email "codex@users.noreply.github.com"
+          git config user.name "ai-bot"
+          git config user.email "ai-bot@users.noreply.github.com"
           git add .
-          git commit -m "Auto update via Codex" || echo "No changes"
+          git commit -m "AI update" || echo "No changes"
           git push

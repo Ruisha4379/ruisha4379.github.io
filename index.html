@@ -9,12 +9,13 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
   <style>
     body {
-      background-color: #f4f4f7;
+      background-color: #f9fafb;
       scroll-behavior: smooth;
-      font-family: 'Inter', sans-serif;
+      font-family: 'Lato', 'Inter', sans-serif;
+      line-height: 1.65;
     }
 
     .hero-gradient {
@@ -70,123 +71,136 @@
     <section id="experience" class="mb-14 md:mb-20">
       <div class="mb-6 flex flex-col justify-between gap-4 md:mb-8 md:flex-row md:items-end">
         <div>
-          <h2 class="text-2xl font-bold text-[#102a43] md:text-3xl">Professional Profile</h2>
-          <p class="mt-2 max-w-3xl text-slate-600">A leadership portfolio across strategy, R&D, and digital execution delivered through a boardroom-ready format.</p>
+          <p class="text-xs font-bold uppercase tracking-[0.2em] text-[#5b6b7d]">Professional Dossier</p>
+          <h2 class="mt-2 text-2xl font-extrabold text-[#003D7C] md:text-3xl">Experience & Capability Registry</h2>
+          <p class="mt-2 max-w-3xl text-slate-600">A service-oriented profile structured for governance, technical depth, and digital delivery readiness.</p>
         </div>
       </div>
 
-      <div class="rounded-2xl border border-slate-200/80 bg-white/80 p-3 shadow-[0_10px_30px_rgba(15,23,42,0.06)] backdrop-blur md:p-4">
+      <div class="rounded-2xl border border-[#E5E7EB] bg-white p-3 md:p-4">
         <div class="grid grid-cols-1 gap-2 md:grid-cols-3" role="tablist" aria-label="Experience tabs">
           <button
-            class="experience-tab w-full rounded-xl border border-[#d8e1ec] bg-[#eaf0f8] px-4 py-3 text-left text-sm font-semibold text-[#102a43] transition hover:bg-[#dfe8f4]"
-            data-tab="professional"
-            id="tab-professional"
+            class="experience-tab w-full rounded-lg border border-[#dbe4ef] bg-[#eaf2fb] px-4 py-3 text-left text-sm font-bold text-[#003D7C] transition"
+            data-tab="policy"
+            id="tab-policy"
             role="tab"
-            aria-controls="panel-professional"
+            aria-controls="panel-policy"
             aria-selected="true"
           >
-            Industry & Public Service
+            Policy & Leadership
           </button>
           <button
-            class="experience-tab w-full rounded-xl border border-transparent px-4 py-3 text-left text-sm font-semibold text-slate-600 transition hover:bg-slate-100"
-            data-tab="research"
-            id="tab-research"
+            class="experience-tab w-full rounded-lg border border-transparent bg-white px-4 py-3 text-left text-sm font-bold text-slate-600 transition hover:bg-slate-50"
+            data-tab="engineering"
+            id="tab-engineering"
             role="tab"
-            aria-controls="panel-research"
+            aria-controls="panel-engineering"
             aria-selected="false"
           >
-            Research & Innovation
+            Engineering & R&D
           </button>
           <button
-            class="experience-tab w-full rounded-xl border border-transparent px-4 py-3 text-left text-sm font-semibold text-slate-600 transition hover:bg-slate-100"
-            data-tab="portfolio"
-            id="tab-portfolio"
+            class="experience-tab w-full rounded-lg border border-transparent bg-white px-4 py-3 text-left text-sm font-bold text-slate-600 transition hover:bg-slate-50"
+            data-tab="digital"
+            id="tab-digital"
             role="tab"
-            aria-controls="panel-portfolio"
+            aria-controls="panel-digital"
             aria-selected="false"
           >
-            Digital Assets
+            Digital Capabilities
           </button>
         </div>
 
-        <div class="mt-6 min-h-[52rem] md:min-h-[41rem]">
-          <article id="panel-professional" class="experience-panel h-full" role="tabpanel" aria-labelledby="tab-professional">
-            <div class="grid h-full gap-5 md:grid-cols-12">
-              <section class="rounded-2xl border border-slate-200 bg-white p-6 md:col-span-5">
-                <p class="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">Strategic Milestones</p>
-                <h3 class="mt-3 text-2xl font-bold text-[#102a43]">National Energy Strategy & Governance</h3>
-                <p class="mt-4 leading-7 text-slate-700">Delivered long-range policy, regulatory design, and investment governance initiatives for a public-sector energy platform, with emphasis on decarbonization pathways and system reliability.</p>
+        <div class="mt-6 min-h-[56rem] md:min-h-[42rem]">
+          <article id="panel-policy" class="experience-panel h-full" role="tabpanel" aria-labelledby="tab-policy">
+            <div class="grid h-full gap-4 md:grid-cols-12">
+              <section class="rounded-xl border border-[#E5E7EB] border-t-4 border-t-[#003D7C] bg-white p-6 md:col-span-5">
+                <p class="text-xs font-bold uppercase tracking-[0.18em] text-[#5b6b7d]">National Impact</p>
+                <h3 class="mt-3 text-2xl font-extrabold text-[#003D7C]">Policy, Governance & Public Leadership</h3>
+                <p class="mt-4 text-slate-700">Led strategic planning initiatives in a statutory-board context, balancing energy security, affordability, and emissions trajectories through evidence-backed governance.</p>
               </section>
               <section class="grid gap-4 md:col-span-7 md:grid-cols-2">
-                <div class="rounded-2xl border border-slate-200 bg-white p-5">
-                  <p class="text-sm font-semibold text-[#1f4b7a]">Energy Transition Planning</p>
-                  <h4 class="mt-2 text-lg font-semibold text-slate-900">2050 Scenario Modeling</h4>
-                  <p class="mt-2 text-sm leading-6 text-slate-700">Directed evidence-based pathway analysis to align national energy supply security with long-term emissions objectives.</p>
+                <div class="rounded-xl border border-[#E5E7EB] border-t-4 border-t-[#003D7C] bg-white p-5">
+                  <p class="text-sm font-bold text-[#003D7C]">Governance</p>
+                  <h4 class="mt-2 text-lg font-bold text-slate-900">Long-Horizon System Planning</h4>
+                  <p class="mt-2 text-sm text-slate-700">Coordinated cross-agency policy scenarios to guide infrastructure and transition pathways through 2050 with transparent decision criteria.</p>
                 </div>
-                <div class="rounded-2xl border border-slate-200 bg-white p-5">
-                  <p class="text-sm font-semibold text-[#1f4b7a]">Regulatory Architecture</p>
-                  <h4 class="mt-2 text-lg font-semibold text-slate-900">Standards & Compliance Frameworks</h4>
-                  <p class="mt-2 text-sm leading-6 text-slate-700">Led development of emissions-code mechanisms to support efficient generation and transparent compliance governance.</p>
+                <div class="rounded-xl border border-[#E5E7EB] border-t-4 border-t-[#003D7C] bg-white p-5">
+                  <p class="text-sm font-bold text-[#003D7C]">Regulation</p>
+                  <h4 class="mt-2 text-lg font-bold text-slate-900">Compliance Architecture</h4>
+                  <p class="mt-2 text-sm text-slate-700">Designed implementation frameworks and monitoring checkpoints for sector-wide standards, ensuring policy intent translated into measurable outcomes.</p>
                 </div>
-                <div class="rounded-2xl border border-slate-200 bg-white p-5 md:col-span-2">
-                  <p class="text-sm font-semibold text-[#1f4b7a]">Capital Governance</p>
-                  <h4 class="mt-2 text-lg font-semibold text-slate-900">Future Energy Investment Oversight</h4>
-                  <p class="mt-2 text-sm leading-6 text-slate-700">Structured accountability and risk-governance workflows for a multi-billion-dollar future energy funding program.</p>
+                <div class="rounded-xl border border-[#E5E7EB] border-t-4 border-t-[#003D7C] bg-white p-5 md:col-span-2">
+                  <p class="text-sm font-bold text-[#003D7C]">Public Value</p>
+                  <h4 class="mt-2 text-lg font-bold text-slate-900">Strategic Funding Oversight</h4>
+                  <p class="mt-2 text-sm text-slate-700">Supported governance controls for major transition investments by formalizing risk, accountability, and reporting structures.</p>
                 </div>
               </section>
             </div>
           </article>
 
-          <article id="panel-research" class="experience-panel hidden h-full" role="tabpanel" aria-labelledby="tab-research">
-            <div class="grid h-full gap-5 md:grid-cols-12">
-              <section class="rounded-2xl border border-slate-200 bg-white p-6 md:col-span-5">
-                <p class="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">Technical Leadership</p>
-                <h3 class="mt-3 text-2xl font-bold text-[#102a43]">R&D Expertise & Applied Analytics</h3>
-                <p class="mt-4 leading-7 text-slate-700">Positioned research as enterprise-grade innovation by combining machine learning, engineering science, and translational delivery in energy and materials systems.</p>
+          <article id="panel-engineering" class="experience-panel hidden h-full" role="tabpanel" aria-labelledby="tab-engineering">
+            <div class="grid h-full gap-4 md:grid-cols-12">
+              <section class="rounded-xl border border-[#E5E7EB] border-t-4 border-t-[#003D7C] bg-white p-6 md:col-span-5">
+                <p class="text-xs font-bold uppercase tracking-[0.18em] text-[#5b6b7d]">Technical Brief</p>
+                <h3 class="mt-3 text-2xl font-extrabold text-[#003D7C]">Engineering Research & Translational R&D</h3>
+                <p class="mt-4 text-slate-700">Delivered research-grade methods with operational relevance, linking doctoral engineering work to deployable tools for energy and market systems.</p>
               </section>
               <section class="grid gap-4 md:col-span-7 md:grid-cols-2">
-                <div class="rounded-2xl border border-slate-200 bg-white p-5">
-                  <p class="text-sm font-semibold text-[#1f4b7a]">Research Program</p>
-                  <h4 class="mt-2 text-lg font-semibold text-slate-900">Doctoral Engineering Platform</h4>
-                  <p class="mt-2 text-sm leading-6 text-slate-700">Built physics-informed and data-driven frameworks for material durability analysis in renewable energy applications.</p>
+                <div class="rounded-xl border border-[#E5E7EB] border-t-4 border-t-[#003D7C] bg-white p-5">
+                  <p class="text-sm font-bold text-[#003D7C]">Research Design</p>
+                  <h4 class="mt-2 text-lg font-bold text-slate-900">Doctoral Engineering Program</h4>
+                  <p class="mt-2 text-sm text-slate-700">Built hybrid physics-based and data-driven models for renewable-asset durability evaluation and lifecycle performance analysis.</p>
                 </div>
-                <div class="rounded-2xl border border-slate-200 bg-white p-5">
-                  <p class="text-sm font-semibold text-[#1f4b7a]">Market Intelligence</p>
-                  <h4 class="mt-2 text-lg font-semibold text-slate-900">Electricity Price Forecasting</h4>
-                  <p class="mt-2 text-sm leading-6 text-slate-700">Published ML forecasting studies for electricity and regulation markets to improve trading and dispatch readiness.</p>
+                <div class="rounded-xl border border-[#E5E7EB] border-t-4 border-t-[#003D7C] bg-white p-5">
+                  <p class="text-sm font-bold text-[#003D7C]">Forecasting</p>
+                  <h4 class="mt-2 text-lg font-bold text-slate-900">Power Market Intelligence</h4>
+                  <p class="mt-2 text-sm text-slate-700">Produced machine-learning forecasting studies for electricity and reserve markets to strengthen operational and dispatch readiness.</p>
                 </div>
-                <div class="rounded-2xl border border-slate-200 bg-white p-5 md:col-span-2">
-                  <p class="text-sm font-semibold text-[#1f4b7a]">Academic Signals</p>
-                  <h4 class="mt-2 text-lg font-semibold text-slate-900">Scholarship, Publications & Distinctions</h4>
-                  <p class="mt-2 text-sm leading-6 text-slate-700">Recognized through competitive scholarship awards, peer-reviewed outputs, and high-performance undergraduate distinctions.</p>
+                <div class="rounded-xl border border-[#E5E7EB] border-t-4 border-t-[#003D7C] bg-white p-5 md:col-span-2">
+                  <p class="text-sm font-bold text-[#003D7C]">Evidence Base</p>
+                  <h4 class="mt-2 text-lg font-bold text-slate-900">Publications, Awards & Scholarly Recognition</h4>
+                  <p class="mt-2 text-sm text-slate-700">Contributed peer-reviewed work and competitive scholarship outcomes demonstrating rigorous methodological and domain expertise.</p>
                 </div>
               </section>
             </div>
           </article>
 
-          <article id="panel-portfolio" class="experience-panel hidden h-full" role="tabpanel" aria-labelledby="tab-portfolio">
-            <div class="grid h-full gap-5 md:grid-cols-12">
-              <section class="rounded-2xl border border-slate-200 bg-white p-6 md:col-span-5">
-                <p class="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">Technical Capabilities</p>
-                <h3 class="mt-3 text-2xl font-bold text-[#102a43]">Digital Delivery & Engineering Depth</h3>
-                <p class="mt-4 leading-7 text-slate-700">A capability portfolio spanning AI/ML, optimization, and industrial system deployment designed for measurable operational outcomes.</p>
+          <article id="panel-digital" class="experience-panel hidden h-full" role="tabpanel" aria-labelledby="tab-digital">
+            <div class="grid h-full gap-4 md:grid-cols-12">
+              <section class="rounded-xl border border-[#E5E7EB] border-t-4 border-t-[#003D7C] bg-white p-6 md:col-span-4">
+                <p class="text-xs font-bold uppercase tracking-[0.18em] text-[#5b6b7d]">Core Competencies</p>
+                <h3 class="mt-3 text-2xl font-extrabold text-[#003D7C]">Digital Capability Hub</h3>
+                <p class="mt-4 text-slate-700">Modular technology capabilities presented in a service-style registry for AI delivery, analytics governance, and production support.</p>
               </section>
-              <section class="grid gap-4 md:col-span-7 md:grid-cols-2">
-                <div class="rounded-2xl border border-slate-200 bg-white p-5">
-                  <h4 class="text-base font-semibold text-slate-900">AI & Machine Learning</h4>
-                  <p class="mt-2 text-sm leading-6 text-slate-700">Gradient-boosting ensembles, deep learning architectures, and reinforcement-learning workflows for high-dimensional decision support.</p>
+              <section class="grid gap-4 sm:grid-cols-2 md:col-span-8">
+                <div class="rounded-xl border border-[#E5E7EB] border-t-4 border-t-[#003D7C] bg-white p-5">
+                  <div class="flex items-center gap-3">
+                    <svg class="h-5 w-5 text-[#003D7C]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3v2.25M14.25 3v2.25M4.5 9.75h15M6.75 6.75h10.5A2.25 2.25 0 0119.5 9v9.75A2.25 2.25 0 0117.25 21H6.75A2.25 2.25 0 014.5 18.75V9A2.25 2.25 0 016.75 6.75z"/></svg>
+                    <h4 class="text-base font-bold text-slate-900">AI & Predictive Modeling</h4>
+                  </div>
+                  <p class="mt-2 text-sm text-slate-700">Applied supervised and deep learning pipelines for forecasting, classification, and scenario decision support.</p>
                 </div>
-                <div class="rounded-2xl border border-slate-200 bg-white p-5">
-                  <h4 class="text-base font-semibold text-slate-900">Modeling & Optimization</h4>
-                  <p class="mt-2 text-sm leading-6 text-slate-700">Optimization toolchains with Pyomo, stochastic modeling methods, and time-series forecasting engines for operational planning.</p>
+                <div class="rounded-xl border border-[#E5E7EB] border-t-4 border-t-[#003D7C] bg-white p-5">
+                  <div class="flex items-center gap-3">
+                    <svg class="h-5 w-5 text-[#003D7C]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M3 3v18h18M7.5 14.25l3-3 2.25 2.25L16.5 9"/></svg>
+                    <h4 class="text-base font-bold text-slate-900">Optimization Systems</h4>
+                  </div>
+                  <p class="mt-2 text-sm text-slate-700">Built optimization and time-series toolchains for planning under uncertainty and operational resource allocation.</p>
                 </div>
-                <div class="rounded-2xl border border-slate-200 bg-white p-5">
-                  <h4 class="text-base font-semibold text-slate-900">Engineering Applications</h4>
-                  <p class="mt-2 text-sm leading-6 text-slate-700">Virtual power plant analytics, industrial anomaly detection, and scenario-based planning for transition-critical infrastructure.</p>
+                <div class="rounded-xl border border-[#E5E7EB] border-t-4 border-t-[#003D7C] bg-white p-5">
+                  <div class="flex items-center gap-3">
+                    <svg class="h-5 w-5 text-[#003D7C]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 7.5h15m-15 4.5h15m-15 4.5h9"/></svg>
+                    <h4 class="text-base font-bold text-slate-900">Engineering Applications</h4>
+                  </div>
+                  <p class="mt-2 text-sm text-slate-700">Delivered analytics modules for virtual power systems, anomaly detection, and infrastructure transition planning.</p>
                 </div>
-                <div class="rounded-2xl border border-slate-200 bg-white p-5">
-                  <h4 class="text-base font-semibold text-slate-900">Data & MLOps Stack</h4>
-                  <p class="mt-2 text-sm leading-6 text-slate-700">Python ecosystem, cloud model operations, and scalable data tooling for experimentation, deployment, and lifecycle governance.</p>
+                <div class="rounded-xl border border-[#E5E7EB] border-t-4 border-t-[#003D7C] bg-white p-5">
+                  <div class="flex items-center gap-3">
+                    <svg class="h-5 w-5 text-[#003D7C]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l4 2m5-2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    <h4 class="text-base font-bold text-slate-900">Data & MLOps Governance</h4>
+                  </div>
+                  <p class="mt-2 text-sm text-slate-700">Managed reproducible model workflows, lifecycle controls, and scalable Python-based data operations.</p>
                 </div>
               </section>
             </div>
@@ -202,6 +216,9 @@
         <p><span class="font-semibold">Email:</span> ruisha.4379@gmail.com</p>
       </div>
     </section>
+
+
+
   </main>
 
   <script>
@@ -211,10 +228,11 @@
     function activateTab(tabKey) {
       tabs.forEach((tab) => {
         const isActive = tab.dataset.tab === tabKey;
-        tab.classList.toggle('bg-[#eaf0f8]', isActive);
-        tab.classList.toggle('border-[#d8e1ec]', isActive);
-        tab.classList.toggle('text-[#102a43]', isActive);
+        tab.classList.toggle('bg-[#eaf2fb]', isActive);
+        tab.classList.toggle('border-[#dbe4ef]', isActive);
+        tab.classList.toggle('text-[#003D7C]', isActive);
         tab.classList.toggle('border-transparent', !isActive);
+        tab.classList.toggle('bg-white', !isActive);
         tab.classList.toggle('text-slate-600', !isActive);
         tab.setAttribute('aria-selected', String(isActive));
       });

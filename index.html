@@ -1,251 +1,364 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dr. Sai's page | Policy & Research Portfolio</title>
-  <meta property="og:title" content="Dr. Sai's page | Policy & Research Portfolio" />
-  <meta name="twitter:title" content="Dr. Sai's page | Policy & Research Portfolio" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
-  <style>
-    body {
-      background-color: #f9fafb;
-      scroll-behavior: smooth;
-      font-family: 'Lato', 'Inter', sans-serif;
-      line-height: 1.65;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarah Sai | AI Innovation & Energy Policy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #050505;
+        }
 
-    .hero-gradient {
-      background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 60%, #0ea5e9 100%);
-    }
+        .text-justify {
+            text-align: justify;
+            text-justify: inter-word;
+        }
 
-    .timeline-line::before {
-      content: "";
-      position: absolute;
-      left: 0.625rem;
-      top: 0;
-      bottom: 0;
-      width: 2px;
-      background: #bfdbfe;
-    }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
 
-    @media (max-width: 768px) {
-      .timeline-line::before {
-        left: 0.5rem;
-      }
-    }
-  </style>
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .glass-nav {
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .project-card {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .project-card:hover {
+            border-color: rgba(59, 130, 246, 0.3);
+            transform: translateY(-4px);
+        }
+
+        .active-tab {
+            background-color: #2563eb;
+            color: white;
+            box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3);
+        }
+    </style>
 </head>
-<body class="font-sans text-slate-900">
-  <nav class="sticky top-0 z-50 border-b border-slate-200 bg-white/90 px-4 py-4 backdrop-blur md:px-8">
-    <div class="mx-auto flex w-full max-w-6xl items-center justify-between">
-      <span class="text-lg font-bold tracking-tight text-blue-900 md:text-xl">Dr. Sai's page</span>
-      <div class="flex items-center gap-3 md:gap-6">
-        <a href="#about" class="text-sm font-medium text-slate-600 hover:text-blue-600 md:text-base">About</a>
-        <a href="#experience" class="text-sm font-medium text-slate-600 hover:text-blue-600 md:text-base">Experience</a>
-        <a href="#contact" class="rounded-lg bg-blue-900 px-3 py-2 text-sm font-medium text-white transition hover:bg-blue-800 md:px-4 md:text-base">Contact</a>
-      </div>
-    </div>
-  </nav>
+<body class="text-white selection:bg-blue-500/30 overflow-x-hidden">
 
-  <header class="hero-gradient px-6 py-20 text-center text-white md:py-24">
-    <h1 class="mx-auto mb-4 max-w-4xl text-3xl font-extrabold tracking-tight md:text-6xl">PhD Researcher, AI Practitioner & Energy Policy Strategist</h1>
-    <p class="mx-auto max-w-3xl text-base leading-relaxed opacity-95 md:text-xl">
-      Bridging technical algorithm development with long-term national planning through evidence-based modeling, responsible AI, and strategic governance.
-    </p>
-  </header>
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-500 py-8 bg-transparent">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <div class="text-xl font-black tracking-tighter cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                SARAH<span class="text-blue-500">.</span>
+            </div>
+            
+            <div class="hidden md:flex items-center space-x-10 text-xs font-bold tracking-widest uppercase text-gray-400">
+                <a href="#about" class="hover:text-white transition-colors relative group">
+                    About
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all group-hover:w-full"></span>
+                </a>
+                <a href="#projects" class="hover:text-white transition-colors relative group">
+                    Projects
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all group-hover:w-full"></span>
+                </a>
+                <a href="#contact" class="hover:text-white transition-colors relative group">
+                    Contact
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all group-hover:w-full"></span>
+                </a>
+            </div>
 
-  <main class="mx-auto max-w-6xl px-4 py-12 md:px-8 md:py-16">
-    <section id="about" class="mb-14 rounded-3xl bg-blue-50 p-6 md:mb-20 md:p-10">
-      <h2 class="mb-4 text-2xl font-bold text-blue-900 md:text-3xl">Professional Summary</h2>
-      <p class="text-base leading-relaxed text-slate-700 md:text-lg">
-        PhD-qualified researcher and public officer with 10+ years of experience across policy planning, AI/ML modeling, and energy-sector innovation.
-        Recognized for translating technical insights into actionable strategy, including long-range energy pathway modeling, regulatory design, and
-        multi-stakeholder implementation.
-      </p>
+            <div class="flex items-center space-x-4">
+                <a href="https://github.com" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                    <i data-lucide="github" class="w-5 h-5"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/wei-sai/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                    <i data-lucide="linkedin" class="w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About / Hero Section -->
+    <section id="about" class="relative min-h-screen flex items-center pt-20">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,#1a1a2e_0%,#050505_100%)]"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 w-full grid lg:grid-cols-12 gap-12 items-center relative z-10">
+            <div class="lg:col-span-7 opacity-0 translate-y-4 transition-all duration-1000 ease-out" id="hero-text">
+                <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-[10px] font-black mb-6 tracking-[0.2em] uppercase">
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                    </span>
+                    <span>10 Years in Energy & AI</span>
+                </div>
+
+                <h1 class="text-6xl md:text-8xl font-black mb-8 leading-[0.9] tracking-tighter">
+                    Hi, I'm<br/>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-600">
+                        Sarah Sai
+                    </span>
+                </h1>
+
+                <p class="text-gray-400 text-lg md:text-xl max-w-2xl mb-10 leading-relaxed font-light text-justify">
+                    With a decade of experience at the intersection of Energy and Artificial Intelligence, I hold a PhD and a portfolio of AI and IoT patents. I am interested in the latest trends and developments in AI technologies, within the energy sector and beyond, and how these can be applied in practical contexts. My work experience includes bridging the gap between AI innovation and energy modelling, leveraging state-of-the-art algorithms to address complex, real-world challenges. I aim to contribute across different roles and sectors by supporting sound decision-making and the responsible application of technology for broader societal benefit.
+                </p>
+
+                <div class="flex flex-wrap gap-3 mb-12">
+                    <span class="flex items-center space-x-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-xs font-medium hover:bg-white/10 transition-colors">
+                        <i data-lucide="trending-up" class="w-3.5 h-3.5 text-blue-400"></i>
+                        <span>Strategic AI Trends</span>
+                    </span>
+                    <span class="flex items-center space-x-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-xs font-medium hover:bg-white/10 transition-colors">
+                        <i data-lucide="globe" class="w-3.5 h-3.5 text-blue-400"></i>
+                        <span>Energy & Cross-Sector AI</span>
+                    </span>
+                    <span class="flex items-center space-x-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-xs font-medium hover:bg-white/10 transition-colors">
+                        <i data-lucide="shield-check" class="w-3.5 h-3.5 text-blue-400"></i>
+                        <span>Responsible Tech Governance</span>
+                    </span>
+                    <span class="flex items-center space-x-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-xs font-medium hover:bg-white/10 transition-colors">
+                        <i data-lucide="scale" class="w-3.5 h-3.5 text-blue-400"></i>
+                        <span>Decision Support Systems</span>
+                    </span>
+                </div>
+
+                <div class="flex flex-wrap gap-4">
+                    <a href="#projects" class="group relative px-10 py-4 bg-white text-black font-black rounded-full hover:scale-105 active:scale-95 transition-all shadow-xl shadow-white/5 flex items-center space-x-2 overflow-hidden">
+                        <span class="relative z-10">View Projects</span>
+                        <i data-lucide="chevron-right" class="w-4.5 h-4.5 relative z-10 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                    
+                    <button onclick="copyEmail(event)" class="flex items-center space-x-2 px-6 py-4 bg-white/5 border border-white/10 rounded-full hover:bg-white/10 transition-all text-sm font-bold relative">
+                        <i data-lucide="mail" class="w-4 h-4"></i>
+                        <span>Contact Me</span>
+                        <div id="email-toast" class="hidden absolute -top-12 left-1/2 -translate-x-1/2 px-3 py-1.5 bg-blue-600 text-white text-[10px] font-bold rounded-lg whitespace-nowrap">
+                            Copied: ruisha.4379@gmail.com
+                        </div>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Avatar -->
+            <div class="lg:col-span-5 relative hidden lg:block opacity-0 scale-95 transition-all duration-1000 delay-200" id="hero-avatar">
+                <div class="relative w-full max-w-[480px] mx-auto aspect-[4/5]">
+                    <div class="absolute -inset-4 bg-blue-600/20 rounded-[4rem] blur-3xl animate-pulse"></div>
+                    <div class="absolute inset-0 rounded-[3.5rem] overflow-hidden border border-white/10 bg-gray-900 shadow-2xl">
+                        <!-- Using Unsplash as placeholder; replace with actual generated avatar URL -->
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800" 
+                             alt="Sarah Sai" 
+                             class="w-full h-full object-cover grayscale-[15%] hover:grayscale-0 transition-all duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
+                        <div class="absolute bottom-8 left-8 right-8">
+                           <div class="bg-black/40 backdrop-blur-md border border-white/10 p-5 rounded-2xl">
+                              <p class="text-[10px] text-blue-400 font-black uppercase tracking-[0.2em] mb-1">PhD Scholar & Expert</p>
+                              <p class="text-sm font-bold">Bridging policy and technology</p>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="experience" class="mb-14 md:mb-20">
-      <div class="mb-6 flex flex-col justify-between gap-4 md:mb-8 md:flex-row md:items-end">
-        <div>
-          <p class="text-xs font-bold uppercase tracking-[0.2em] text-[#5b6b7d]">Professional Dossier</p>
-          <h2 class="mt-2 text-2xl font-extrabold text-[#003D7C] md:text-3xl">Experience & Capability Registry</h2>
-          <p class="mt-2 max-w-3xl text-slate-600">A service-oriented profile structured for governance, technical depth, and digital delivery readiness.</p>
-        </div>
-      </div>
-
-      <div class="rounded-2xl border border-[#E5E7EB] bg-white p-3 md:p-4">
-        <div class="grid grid-cols-1 gap-2 md:grid-cols-3" role="tablist" aria-label="Experience tabs">
-          <button
-            class="experience-tab w-full rounded-lg border border-[#dbe4ef] bg-[#eaf2fb] px-4 py-3 text-left text-sm font-bold text-[#003D7C] transition"
-            data-tab="policy"
-            id="tab-policy"
-            role="tab"
-            aria-controls="panel-policy"
-            aria-selected="true"
-          >
-            Policy & Leadership
-          </button>
-          <button
-            class="experience-tab w-full rounded-lg border border-transparent bg-white px-4 py-3 text-left text-sm font-bold text-slate-600 transition hover:bg-slate-50"
-            data-tab="engineering"
-            id="tab-engineering"
-            role="tab"
-            aria-controls="panel-engineering"
-            aria-selected="false"
-          >
-            Engineering & R&D
-          </button>
-          <button
-            class="experience-tab w-full rounded-lg border border-transparent bg-white px-4 py-3 text-left text-sm font-bold text-slate-600 transition hover:bg-slate-50"
-            data-tab="digital"
-            id="tab-digital"
-            role="tab"
-            aria-controls="panel-digital"
-            aria-selected="false"
-          >
-            Digital Capabilities
-          </button>
-        </div>
-
-        <div class="mt-6 min-h-[56rem] md:min-h-[42rem]">
-          <article id="panel-policy" class="experience-panel h-full" role="tabpanel" aria-labelledby="tab-policy">
-            <div class="grid h-full gap-4 md:grid-cols-12">
-              <section class="rounded-xl border border-[#E5E7EB] border-t-4 border-t-[#003D7C] bg-white p-6 md:col-span-5">
-                <p class="text-xs font-bold uppercase tracking-[0.18em] text-[#5b6b7d]">National Impact</p>
-                <h3 class="mt-3 text-2xl font-extrabold text-[#003D7C]">Policy, Governance & Public Leadership</h3>
-                <p class="mt-4 text-slate-700">Led strategic planning initiatives in a statutory-board context, balancing energy security, affordability, and emissions trajectories through evidence-backed governance.</p>
-              </section>
-              <section class="grid gap-4 md:col-span-7 md:grid-cols-2">
-                <div class="rounded-xl border border-[#E5E7EB] border-t-4 border-t-[#003D7C] bg-white p-5">
-                  <p class="text-sm font-bold text-[#003D7C]">Governance</p>
-                  <h4 class="mt-2 text-lg font-bold text-slate-900">Long-Horizon System Planning</h4>
-                  <p class="mt-2 text-sm text-slate-700">Coordinated cross-agency policy scenarios to guide infrastructure and transition pathways through 2050 with transparent decision criteria.</p>
+    <!-- Projects Section -->
+    <section id="projects" class="py-32 bg-[#080808]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col xl:flex-row xl:items-end justify-between mb-20 gap-8">
+                <div class="max-w-2xl">
+                    <h2 class="text-5xl md:text-6xl font-black mb-6 tracking-tighter">Projects</h2>
+                    <p class="text-gray-500 text-lg font-light leading-relaxed">
+                        A generalized overview of research, modeling, and policy advancements across the energy landscape.
+                    </p>
                 </div>
-                <div class="rounded-xl border border-[#E5E7EB] border-t-4 border-t-[#003D7C] bg-white p-5">
-                  <p class="text-sm font-bold text-[#003D7C]">Regulation</p>
-                  <h4 class="mt-2 text-lg font-bold text-slate-900">Compliance Architecture</h4>
-                  <p class="mt-2 text-sm text-slate-700">Designed implementation frameworks and monitoring checkpoints for sector-wide standards, ensuring policy intent translated into measurable outcomes.</p>
+                
+                <!-- Filters -->
+                <div class="flex flex-wrap gap-2 bg-white/5 p-2 rounded-2xl border border-white/5 overflow-x-auto no-scrollbar" id="project-filters">
+                    <button onclick="filterProjects('All')" class="filter-btn active-tab whitespace-nowrap px-6 py-3 rounded-xl text-[10px] font-black tracking-widest uppercase transition-all duration-300">All</button>
+                    <button onclick="filterProjects('Energy Policy and Governance')" class="filter-btn text-gray-500 hover:text-white whitespace-nowrap px-6 py-3 rounded-xl text-[10px] font-black tracking-widest uppercase transition-all duration-300">Energy Policy and Governance</button>
+                    <button onclick="filterProjects('Energy Modelling')" class="filter-btn text-gray-500 hover:text-white whitespace-nowrap px-6 py-3 rounded-xl text-[10px] font-black tracking-widest uppercase transition-all duration-300">Energy Modelling</button>
+                    <button onclick="filterProjects('AI Algorithms and Patents')" class="filter-btn text-gray-500 hover:text-white whitespace-nowrap px-6 py-3 rounded-xl text-[10px] font-black tracking-widest uppercase transition-all duration-300">AI Algorithms and Patents</button>
+                    <button onclick="filterProjects('Agentic AI')" class="filter-btn text-gray-500 hover:text-white whitespace-nowrap px-6 py-3 rounded-xl text-[10px] font-black tracking-widest uppercase transition-all duration-300">Agentic AI</button>
                 </div>
-                <div class="rounded-xl border border-[#E5E7EB] border-t-4 border-t-[#003D7C] bg-white p-5 md:col-span-2">
-                  <p class="text-sm font-bold text-[#003D7C]">Public Value</p>
-                  <h4 class="mt-2 text-lg font-bold text-slate-900">Strategic Funding Oversight</h4>
-                  <p class="mt-2 text-sm text-slate-700">Supported governance controls for major transition investments by formalizing risk, accountability, and reporting structures.</p>
-                </div>
-              </section>
             </div>
-          </article>
 
-          <article id="panel-engineering" class="experience-panel hidden h-full" role="tabpanel" aria-labelledby="tab-engineering">
-            <div class="grid h-full gap-4 md:grid-cols-12">
-              <section class="rounded-xl border border-[#E5E7EB] border-t-4 border-t-[#003D7C] bg-white p-6 md:col-span-5">
-                <p class="text-xs font-bold uppercase tracking-[0.18em] text-[#5b6b7d]">Technical Brief</p>
-                <h3 class="mt-3 text-2xl font-extrabold text-[#003D7C]">Engineering Research & Translational R&D</h3>
-                <p class="mt-4 text-slate-700">Delivered research-grade methods with operational relevance, linking doctoral engineering work to deployable tools for energy and market systems.</p>
-              </section>
-              <section class="grid gap-4 md:col-span-7 md:grid-cols-2">
-                <div class="rounded-xl border border-[#E5E7EB] border-t-4 border-t-[#003D7C] bg-white p-5">
-                  <p class="text-sm font-bold text-[#003D7C]">Research Design</p>
-                  <h4 class="mt-2 text-lg font-bold text-slate-900">Doctoral Engineering Program</h4>
-                  <p class="mt-2 text-sm text-slate-700">Built hybrid physics-based and data-driven models for renewable-asset durability evaluation and lifecycle performance analysis.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 transition-all duration-500" id="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card group relative bg-gray-900/20 rounded-[2.5rem] overflow-hidden border border-white/5 flex flex-col" data-category="Energy Policy and Governance">
+                    <div class="relative aspect-[16/10] overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Energy Transition">
+                    </div>
+                    <div class="p-10 relative">
+                        <span class="text-blue-500 text-[10px] font-black uppercase tracking-[0.2em] mb-4 block leading-tight">Energy Policy and Governance</span>
+                        <h3 class="text-2xl font-bold mb-4">Energy policy and energy transition</h3>
+                        <p class="text-gray-500 text-sm font-light leading-relaxed text-justify">Shaping the future of energy through meticulous planning and policy development. My work focuses on achieving a low-carbon energy future while balancing system stability and affordability, driving long-term change to ensure that businesses and industries are effectively supported during the transition towards a sustainable energy future.</p>
+                    </div>
                 </div>
-                <div class="rounded-xl border border-[#E5E7EB] border-t-4 border-t-[#003D7C] bg-white p-5">
-                  <p class="text-sm font-bold text-[#003D7C]">Forecasting</p>
-                  <h4 class="mt-2 text-lg font-bold text-slate-900">Power Market Intelligence</h4>
-                  <p class="mt-2 text-sm text-slate-700">Produced machine-learning forecasting studies for electricity and reserve markets to strengthen operational and dispatch readiness.</p>
-                </div>
-                <div class="rounded-xl border border-[#E5E7EB] border-t-4 border-t-[#003D7C] bg-white p-5 md:col-span-2">
-                  <p class="text-sm font-bold text-[#003D7C]">Evidence Base</p>
-                  <h4 class="mt-2 text-lg font-bold text-slate-900">Publications, Awards & Scholarly Recognition</h4>
-                  <p class="mt-2 text-sm text-slate-700">Contributed peer-reviewed work and competitive scholarship outcomes demonstrating rigorous methodological and domain expertise.</p>
-                </div>
-              </section>
-            </div>
-          </article>
 
-          <article id="panel-digital" class="experience-panel hidden h-full" role="tabpanel" aria-labelledby="tab-digital">
-            <div class="grid h-full gap-4 md:grid-cols-12">
-              <section class="rounded-xl border border-[#E5E7EB] border-t-4 border-t-[#003D7C] bg-white p-6 md:col-span-4">
-                <p class="text-xs font-bold uppercase tracking-[0.18em] text-[#5b6b7d]">Core Competencies</p>
-                <h3 class="mt-3 text-2xl font-extrabold text-[#003D7C]">Digital Capability Hub</h3>
-                <p class="mt-4 text-slate-700">Modular technology capabilities presented in a service-style registry for AI delivery, analytics governance, and production support.</p>
-              </section>
-              <section class="grid gap-4 sm:grid-cols-2 md:col-span-8">
-                <div class="rounded-xl border border-[#E5E7EB] border-t-4 border-t-[#003D7C] bg-white p-5">
-                  <div class="flex items-center gap-3">
-                    <svg class="h-5 w-5 text-[#003D7C]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3v2.25M14.25 3v2.25M4.5 9.75h15M6.75 6.75h10.5A2.25 2.25 0 0119.5 9v9.75A2.25 2.25 0 0117.25 21H6.75A2.25 2.25 0 014.5 18.75V9A2.25 2.25 0 016.75 6.75z"/></svg>
-                    <h4 class="text-base font-bold text-slate-900">AI & Predictive Modeling</h4>
-                  </div>
-                  <p class="mt-2 text-sm text-slate-700">Applied supervised and deep learning pipelines for forecasting, classification, and scenario decision support.</p>
+                <!-- Project 2 -->
+                <div class="project-card group relative bg-gray-900/20 rounded-[2.5rem] overflow-hidden border border-white/5 flex flex-col" data-category="Energy Modelling">
+                    <div class="relative aspect-[16/10] overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Energy Modelling">
+                    </div>
+                    <div class="p-10 relative">
+                        <span class="text-blue-500 text-[10px] font-black uppercase tracking-[0.2em] mb-4 block leading-tight">Energy Modelling</span>
+                        <h3 class="text-2xl font-bold mb-4">Strategic Energy Pathway Modelling</h3>
+                        <p class="text-gray-500 text-sm font-light leading-relaxed text-justify">Directed scenario-based modeling for long-term energy master plans and developed machine learning models to forecast wholesale electricity and reserve prices using real-time data streams for operational deployment.</p>
+                    </div>
                 </div>
-                <div class="rounded-xl border border-[#E5E7EB] border-t-4 border-t-[#003D7C] bg-white p-5">
-                  <div class="flex items-center gap-3">
-                    <svg class="h-5 w-5 text-[#003D7C]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M3 3v18h18M7.5 14.25l3-3 2.25 2.25L16.5 9"/></svg>
-                    <h4 class="text-base font-bold text-slate-900">Optimization Systems</h4>
-                  </div>
-                  <p class="mt-2 text-sm text-slate-700">Built optimization and time-series toolchains for planning under uncertainty and operational resource allocation.</p>
+
+                <!-- Project 3 -->
+                <div class="project-card group relative bg-gray-900/20 rounded-[2.5rem] overflow-hidden border border-white/5 flex flex-col" data-category="AI Algorithms and Patents">
+                    <div class="relative aspect-[16/10] overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="AI & Patents">
+                    </div>
+                    <div class="p-10 relative">
+                        <span class="text-blue-500 text-[10px] font-black uppercase tracking-[0.2em] mb-4 block leading-tight">AI Algorithms and Patents</span>
+                        <h3 class="text-2xl font-bold mb-4">Patented Cloud-AI Infrastructure</h3>
+                        <div class="text-gray-500 text-sm font-light leading-relaxed text-justify space-y-4">
+                            <p>Utilized a diverse array of machine learning and deep learning methodologies—ranging from supervised ensemble methods to advanced transformer-based architectures and reinforcement learning—to drive predictive modeling and cross-sector optimization.</p>
+                            <p>Lead inventor of specialized AI and IoT patents focusing on virtual power plant aggregation, energy trading platforms, and cloud-enabled edge computing solutions for infrastructure anomaly detection and predictive maintenance.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="rounded-xl border border-[#E5E7EB] border-t-4 border-t-[#003D7C] bg-white p-5">
-                  <div class="flex items-center gap-3">
-                    <svg class="h-5 w-5 text-[#003D7C]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 7.5h15m-15 4.5h15m-15 4.5h9"/></svg>
-                    <h4 class="text-base font-bold text-slate-900">Engineering Applications</h4>
-                  </div>
-                  <p class="mt-2 text-sm text-slate-700">Delivered analytics modules for virtual power systems, anomaly detection, and infrastructure transition planning.</p>
+
+                <!-- Project 4 -->
+                <div class="project-card group relative bg-gray-900/20 rounded-[2.5rem] overflow-hidden border border-white/5 flex flex-col" data-category="Agentic AI">
+                    <div class="relative aspect-[16/10] overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Agentic AI">
+                    </div>
+                    <div class="p-10 relative">
+                        <span class="text-blue-500 text-[10px] font-black uppercase tracking-[0.2em] mb-4 block leading-tight">Agentic AI</span>
+                        <h3 class="text-2xl font-bold mb-4">Agentic AI & Vibe Coding</h3>
+                        <p class="text-gray-500 text-sm font-light leading-relaxed text-justify">Building autonomous systems leveraging LLMs and Agentic tools like Codex and Cursor. Passionate about 'Vibe Coding'—the shift towards intent-driven development to accelerate practical innovation and broaden technology's societal benefit.</p>
+                    </div>
                 </div>
-                <div class="rounded-xl border border-[#E5E7EB] border-t-4 border-t-[#003D7C] bg-white p-5">
-                  <div class="flex items-center gap-3">
-                    <svg class="h-5 w-5 text-[#003D7C]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l4 2m5-2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                    <h4 class="text-base font-bold text-slate-900">Data & MLOps Governance</h4>
-                  </div>
-                  <p class="mt-2 text-sm text-slate-700">Managed reproducible model workflows, lifecycle controls, and scalable Python-based data operations.</p>
-                </div>
-              </section>
             </div>
-          </article>
         </div>
-      </div>
     </section>
 
-    <section id="contact" class="rounded-3xl border border-slate-200 bg-white p-6 md:p-8">
-      <h2 class="text-2xl font-bold text-blue-900 md:text-3xl">Contact</h2>
-      <div class="mt-4 grid gap-4 text-slate-700 md:grid-cols-2">
-        <p><span class="font-semibold">Location:</span> Singapore</p>
-        <p><span class="font-semibold">Email:</span> ruisha.4379@gmail.com</p>
-      </div>
-    </section>
+    <!-- Footer / Contact -->
+    <footer id="contact" class="py-24 bg-black border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-12">
+                <div class="text-center md:text-left">
+                    <h2 class="text-3xl font-black mb-2 tracking-tighter uppercase">SARAH SAI</h2>
+                    <p class="text-gray-600 text-xs font-bold tracking-widest uppercase italic text-justify">Supporting sound decision-making and the responsible application of technology.</p>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button onclick="copyEmail(event)" class="p-5 bg-white/5 rounded-2xl hover:bg-white/10 transition-all border border-white/5 relative group">
+                        <i data-lucide="mail" class="w-5 h-5" id="footer-mail-icon"></i>
+                        <i data-lucide="check" class="w-5 h-5 hidden text-blue-400" id="footer-check-icon"></i>
+                        <div id="footer-toast" class="hidden absolute left-1/2 -translate-x-1/2 -top-12 px-3 py-1.5 bg-blue-600 text-white text-[10px] font-bold rounded-lg whitespace-nowrap">
+                            ruisha.4379@gmail.com
+                        </div>
+                    </button>
+                    <a href="https://github.com" target="_blank" class="p-5 bg-white/5 rounded-2xl hover:bg-white/10 transition-all border border-white/5">
+                        <i data-lucide="github" class="w-5 h-5"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/wei-sai/" target="_blank" class="p-5 bg-white/5 rounded-2xl hover:bg-white/10 transition-all border border-white/5">
+                        <i data-lucide="linkedin" class="w-5 h-5"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-12 pt-12 border-t border-white/5 text-center md:text-left">
+                <p class="text-gray-600 text-[10px] tracking-widest uppercase">© 2024 Built by Sarah Sai. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
 
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
 
+        // Reveal animations on load
+        window.addEventListener('load', () => {
+            document.getElementById('hero-text').style.opacity = '1';
+            document.getElementById('hero-text').style.transform = 'translateY(0)';
+            document.getElementById('hero-avatar').style.opacity = '1';
+            document.getElementById('hero-avatar').style.transform = 'scale(1)';
+        });
 
-  </main>
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('glass-nav', 'py-4');
+                nav.classList.remove('bg-transparent', 'py-8');
+            } else {
+                nav.classList.remove('glass-nav', 'py-4');
+                nav.classList.add('bg-transparent', 'py-8');
+            }
+        });
 
-  <script>
-    const tabs = document.querySelectorAll('.experience-tab');
-    const panels = document.querySelectorAll('.experience-panel');
+        // Email Copy Logic
+        function copyEmail(e) {
+            const email = "ruisha.4379@gmail.com";
+            const tempInput = document.createElement("input");
+            tempInput.value = email;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
 
-    function activateTab(tabKey) {
-      tabs.forEach((tab) => {
-        const isActive = tab.dataset.tab === tabKey;
-        tab.classList.toggle('bg-[#eaf2fb]', isActive);
-        tab.classList.toggle('border-[#dbe4ef]', isActive);
-        tab.classList.toggle('text-[#003D7C]', isActive);
-        tab.classList.toggle('border-transparent', !isActive);
-        tab.classList.toggle('bg-white', !isActive);
-        tab.classList.toggle('text-slate-600', !isActive);
-        tab.setAttribute('aria-selected', String(isActive));
-      });
+            // Toggle Toast Visibility
+            const toast = document.getElementById('email-toast');
+            const footerToast = document.getElementById('footer-toast');
+            const footerMailIcon = document.getElementById('footer-mail-icon');
+            const footerCheckIcon = document.getElementById('footer-check-icon');
 
-      panels.forEach((panel) => {
-        const isActive = panel.id === `panel-${tabKey}`;
-        panel.classList.toggle('hidden', !isActive);
-      });
-    }
+            if(toast) {
+                toast.classList.remove('hidden');
+                setTimeout(() => toast.classList.add('hidden'), 3000);
+            }
 
-    tabs.forEach((tab) => {
-      tab.addEventListener('click', () => activateTab(tab.dataset.tab));
-    });
-  </script>
+            if(footerToast) {
+                footerToast.classList.remove('hidden');
+                footerMailIcon.classList.add('hidden');
+                footerCheckIcon.classList.remove('hidden');
+                setTimeout(() => {
+                    footerToast.classList.add('hidden');
+                    footerMailIcon.classList.remove('hidden');
+                    footerCheckIcon.classList.add('hidden');
+                }, 3000);
+            }
+        }
+
+        // Project Filtering Logic
+        function filterProjects(category) {
+            const grid = document.getElementById('projects-grid');
+            const cards = document.querySelectorAll('.project-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            // Update button styles
+            buttons.forEach(btn => {
+                if (btn.innerText.trim() === category) {
+                    btn.classList.add('active-tab');
+                    btn.classList.remove('text-gray-500', 'hover:text-white');
+                } else {
+                    btn.classList.remove('active-tab');
+                    btn.classList.add('text-gray-500', 'hover:text-white');
+                }
+            });
+
+            // Filter cards with simple animation
+            cards.forEach(card => {
+                const cardCat = card.getAttribute('data-category');
+                if (category === 'All' || cardCat === category) {
+                    card.style.display = 'flex';
+                    setTimeout(() => card.style.opacity = '1', 50);
+                } else {
+                    card.style.opacity = '0';
+                    setTimeout(() => card.style.display = 'none', 300);
+                }
+            });
+        }
+    </script>
 </body>
 </html>

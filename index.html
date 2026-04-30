@@ -325,15 +325,15 @@
                 }
             });
 
-            // Filter cards with simple animation
+            // Filter cards instantly to prevent layout wobble
             cards.forEach(card => {
                 const cardCat = card.getAttribute('data-category');
                 if (category === 'All' || cardCat === category) {
                     card.style.display = 'flex';
-                    setTimeout(() => card.style.opacity = '1', 50);
+                    card.style.opacity = '1';
                 } else {
+                    card.style.display = 'none';
                     card.style.opacity = '0';
-                    setTimeout(() => card.style.display = 'none', 300);
                 }
             });
         }

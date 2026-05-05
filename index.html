@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
-        
+
         body {
             font-family: 'Inter', sans-serif;
             background-color: #050505;
@@ -50,31 +51,38 @@
         }
     </style>
 </head>
+
 <body class="text-white selection:bg-blue-500/30 overflow-x-hidden">
 
     <!-- Navigation -->
     <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-500 py-8 bg-transparent">
         <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
-            <div class="text-xl font-black tracking-tighter cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+            <div class="text-xl font-black tracking-tighter cursor-pointer"
+                onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
                 SAI'S PAGE<span class="text-blue-500">.</span>
             </div>
-            
-            <div class="hidden md:flex items-center space-x-10 text-xs font-bold tracking-widest uppercase text-gray-400">
+
+            <div
+                class="hidden md:flex items-center space-x-10 text-xs font-bold tracking-widest uppercase text-gray-400">
                 <a href="#about" class="hover:text-white transition-colors relative group">
                     About
-                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all group-hover:w-full"></span>
+                    <span
+                        class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all group-hover:w-full"></span>
                 </a>
                 <a href="#projects" class="hover:text-white transition-colors relative group">
                     Projects
-                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all group-hover:w-full"></span>
+                    <span
+                        class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all group-hover:w-full"></span>
                 </a>
                 <a href="#collaboration" class="hover:text-white transition-colors relative group">
                     Collaboration
-                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all group-hover:w-full"></span>
+                    <span
+                        class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all group-hover:w-full"></span>
                 </a>
                 <a href="#contact" class="hover:text-white transition-colors relative group">
                     Contact
-                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all group-hover:w-full"></span>
+                    <span
+                        class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all group-hover:w-full"></span>
                 </a>
             </div>
 
@@ -82,7 +90,8 @@
                 <a href="https://github.com" target="_blank" class="text-gray-400 hover:text-white transition-colors">
                     <i data-lucide="github" class="w-5 h-5"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/wei-sai/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                <a href="https://www.linkedin.com/in/wei-sai/" target="_blank"
+                    class="text-gray-400 hover:text-white transition-colors">
                     <i data-lucide="linkedin" class="w-5 h-5"></i>
                 </a>
             </div>
@@ -92,63 +101,82 @@
     <!-- About / Hero Section -->
     <section id="about" class="relative min-h-screen flex items-center pt-20">
         <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,#1a1a2e_0%,#050505_100%)]"></div>
-        
+
         <div class="max-w-7xl mx-auto px-6 w-full grid lg:grid-cols-12 gap-12 items-center relative z-10">
             <div class="lg:col-span-7 opacity-0 translate-y-4 transition-all duration-1000 ease-out" id="hero-text">
-                <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-[10px] font-black mb-6 tracking-[0.2em] uppercase">
+                <div
+                    class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-[10px] font-black mb-6 tracking-[0.2em] uppercase">
                     <span class="relative flex h-2 w-2">
-                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                        <span
+                            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
                         <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
                     </span>
                     <span>10 Years in Energy & AI</span>
                 </div>
 
                 <h1 class="text-6xl md:text-8xl font-black mb-8 leading-[0.9] tracking-tighter">
-                    Welcome to<br/>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-600">
+                    Welcome to<br />
+                    <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-600">
                         Sai's Page
                     </span>
                 </h1>
 
                 <p class="text-gray-400 text-lg md:text-xl max-w-2xl mb-10 leading-relaxed font-light text-justify">
-                    With a decade of experience at the intersection of Energy and Artificial Intelligence, I hold a PhD and a portfolio of AI and IoT patents. I am interested in the latest trends and developments in AI technologies, within the energy sector and beyond, and how these can be applied in practical contexts. My work experience includes bridging the gap between AI innovation and energy modelling, leveraging state-of-the-art algorithms to address complex, real-world challenges. I aim to contribute across different roles and sectors by supporting sound decision-making and the responsible application of technology for broader societal benefit.
+                    With a decade of experience at the intersection of Energy and Artificial Intelligence, I hold a PhD
+                    and a portfolio of AI and IoT patents. I am interested in the latest trends and developments in AI
+                    technologies, within the energy sector and beyond, and how these can be applied in practical
+                    contexts. My work experience includes bridging the gap between AI innovation and energy modelling,
+                    leveraging state-of-the-art algorithms to address complex, real-world challenges. I aim to
+                    contribute across different roles and sectors by supporting sound decision-making and the
+                    responsible application of technology for broader societal benefit.
                 </p>
 
                 <div class="flex flex-wrap gap-3 mb-12">
-                    <span class="flex items-center space-x-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-xs font-medium hover:bg-white/10 transition-colors">
+                    <span
+                        class="flex items-center space-x-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-xs font-medium hover:bg-white/10 transition-colors">
                         <i data-lucide="trending-up" class="w-3.5 h-3.5 text-blue-400"></i>
                         <span>Strategic AI Trends</span>
                     </span>
-                    <span class="flex items-center space-x-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-xs font-medium hover:bg-white/10 transition-colors">
+                    <span
+                        class="flex items-center space-x-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-xs font-medium hover:bg-white/10 transition-colors">
                         <i data-lucide="globe" class="w-3.5 h-3.5 text-blue-400"></i>
                         <span>Energy & Cross-Sector AI</span>
                     </span>
-                    <span class="flex items-center space-x-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-xs font-medium hover:bg-white/10 transition-colors">
+                    <span
+                        class="flex items-center space-x-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-xs font-medium hover:bg-white/10 transition-colors">
                         <i data-lucide="shield-check" class="w-3.5 h-3.5 text-blue-400"></i>
                         <span>Responsible Tech Governance</span>
                     </span>
-                    <span class="flex items-center space-x-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-xs font-medium hover:bg-white/10 transition-colors">
+                    <span
+                        class="flex items-center space-x-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-xs font-medium hover:bg-white/10 transition-colors">
                         <i data-lucide="scale" class="w-3.5 h-3.5 text-blue-400"></i>
                         <span>Decision Support Systems</span>
                     </span>
                 </div>
 
                 <div class="flex flex-wrap gap-4">
-                    <a href="#projects" class="group relative px-10 py-4 bg-white text-black font-black rounded-full hover:scale-105 active:scale-95 transition-all shadow-xl shadow-white/5 flex items-center space-x-2 overflow-hidden">
+                    <a href="#projects"
+                        class="group relative px-10 py-4 bg-white text-black font-black rounded-full hover:scale-105 active:scale-95 transition-all shadow-xl shadow-white/5 flex items-center space-x-2 overflow-hidden">
                         <span class="relative z-10">View Projects</span>
-                        <i data-lucide="chevron-right" class="w-4.5 h-4.5 relative z-10 group-hover:translate-x-1 transition-transform"></i>
+                        <i data-lucide="chevron-right"
+                            class="w-4.5 h-4.5 relative z-10 group-hover:translate-x-1 transition-transform"></i>
                     </a>
-                    
-                    <a href="#contact" class="flex items-center space-x-2 px-6 py-4 bg-white/5 border border-white/10 rounded-full hover:bg-white/10 transition-all text-sm font-bold relative">
+
+                    <a href="#contact"
+                        class="flex items-center space-x-2 px-6 py-4 bg-white/5 border border-white/10 rounded-full hover:bg-white/10 transition-all text-sm font-bold relative">
                         <i data-lucide="mail" class="w-4 h-4"></i>
                         <span>Contact Me</span>
                     </a>
                 </div>
             </div>
 
-            <div class="lg:col-span-5 opacity-0 scale-95 transition-all duration-1000 ease-out delay-300 flex justify-center order-first lg:order-last mb-8 lg:mb-0" id="hero-avatar">
-                <div class="relative w-[240px] h-[240px] md:w-[380px] md:h-[380px] mx-auto rounded-full overflow-hidden border-8 border-white/5 shadow-2xl shadow-blue-500/10">
-                    <img src="IMG_7332.png" alt="Sai's Page" class="w-full h-full object-cover" style="object-position: top;">
+            <div class="lg:col-span-5 opacity-0 scale-95 transition-all duration-1000 ease-out delay-300 flex justify-center order-first lg:order-last mb-8 lg:mb-0"
+                id="hero-avatar">
+                <div
+                    class="relative w-[240px] h-[240px] md:w-[380px] md:h-[380px] mx-auto rounded-full overflow-hidden border-8 border-white/5 shadow-2xl shadow-blue-500/10">
+                    <img src="IMG_7332.png" alt="Sai's Page" class="w-full h-full object-cover"
+                        style="object-position: top;">
                 </div>
             </div>
 
@@ -162,69 +190,115 @@
                 <div class="max-w-2xl">
                     <h2 class="text-5xl md:text-6xl font-black mb-6 tracking-tighter">Projects</h2>
                     <p class="text-gray-500 text-lg font-light leading-relaxed">
-                        A generalized overview of research, modeling, and policy advancements across the energy landscape.
+                        A generalized overview of research, modeling, and policy advancements across the energy
+                        landscape.
                     </p>
                 </div>
-                
+
                 <!-- Filters -->
-                <div class="flex flex-wrap gap-2 bg-white/5 p-2 rounded-2xl border border-white/5 overflow-x-auto no-scrollbar" id="project-filters">
-                    <button onclick="filterProjects('All')" class="filter-btn active-tab whitespace-nowrap px-6 py-3 rounded-xl text-[10px] font-black tracking-widest uppercase transition-all duration-300">All</button>
-                    <button onclick="filterProjects('Energy Policy and Governance')" class="filter-btn text-gray-500 hover:text-white whitespace-nowrap px-6 py-3 rounded-xl text-[10px] font-black tracking-widest uppercase transition-all duration-300">Energy Policy and Governance</button>
-                    <button onclick="filterProjects('Energy Modelling')" class="filter-btn text-gray-500 hover:text-white whitespace-nowrap px-6 py-3 rounded-xl text-[10px] font-black tracking-widest uppercase transition-all duration-300">Energy Modelling</button>
-                    <button onclick="filterProjects('AI Algorithms and Patents')" class="filter-btn text-gray-500 hover:text-white whitespace-nowrap px-6 py-3 rounded-xl text-[10px] font-black tracking-widest uppercase transition-all duration-300">AI Algorithms and Patents</button>
-                    <button onclick="filterProjects('Agentic AI')" class="filter-btn text-gray-500 hover:text-white whitespace-nowrap px-6 py-3 rounded-xl text-[10px] font-black tracking-widest uppercase transition-all duration-300">Agentic AI</button>
+                <div class="flex flex-wrap gap-2 bg-white/5 p-2 rounded-2xl border border-white/5 overflow-x-auto no-scrollbar"
+                    id="project-filters">
+                    <button onclick="filterProjects('All')"
+                        class="filter-btn active-tab whitespace-nowrap px-6 py-3 rounded-xl text-[10px] font-black tracking-widest uppercase transition-all duration-300">All</button>
+                    <button onclick="filterProjects('Energy Policy and Governance')"
+                        class="filter-btn text-gray-500 hover:text-white whitespace-nowrap px-6 py-3 rounded-xl text-[10px] font-black tracking-widest uppercase transition-all duration-300">Energy
+                        Policy and Governance</button>
+                    <button onclick="filterProjects('Energy Modelling')"
+                        class="filter-btn text-gray-500 hover:text-white whitespace-nowrap px-6 py-3 rounded-xl text-[10px] font-black tracking-widest uppercase transition-all duration-300">Energy
+                        Modelling</button>
+                    <button onclick="filterProjects('AI Algorithms and Patents')"
+                        class="filter-btn text-gray-500 hover:text-white whitespace-nowrap px-6 py-3 rounded-xl text-[10px] font-black tracking-widest uppercase transition-all duration-300">AI
+                        Algorithms and Patents</button>
+                    <button onclick="filterProjects('Agentic AI')"
+                        class="filter-btn text-gray-500 hover:text-white whitespace-nowrap px-6 py-3 rounded-xl text-[10px] font-black tracking-widest uppercase transition-all duration-300">Agentic
+                        AI</button>
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 transition-all duration-500" id="projects-grid">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 transition-all duration-500"
+                id="projects-grid">
                 <!-- Project 1 -->
-                <div class="project-card group relative bg-gray-900/20 rounded-[2.5rem] overflow-hidden border border-white/5 flex flex-col" data-category="Energy Policy and Governance">
+                <div class="project-card group relative bg-gray-900/20 rounded-[2.5rem] overflow-hidden border border-white/5 flex flex-col"
+                    data-category="Energy Policy and Governance">
                     <div class="relative aspect-[16/10] overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Energy Transition">
+                        <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&q=80&w=800"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                            alt="Energy Transition">
                     </div>
                     <div class="p-10 relative">
-                        <span class="text-blue-500 text-[10px] font-black uppercase tracking-[0.2em] mb-4 block leading-tight">Energy Policy and Governance</span>
+                        <span
+                            class="text-blue-500 text-[10px] font-black uppercase tracking-[0.2em] mb-4 block leading-tight">Energy
+                            Policy and Governance</span>
                         <h3 class="text-2xl font-bold mb-4">Energy policy and energy transition</h3>
-                        <p class="text-gray-500 text-sm font-light leading-relaxed text-justify">Shaping the future of energy through meticulous planning and policy development. My work focuses on achieving a low-carbon energy future while balancing system stability and affordability, driving long-term change to ensure that businesses and industries are effectively supported during the transition towards a sustainable energy future.</p>
+                        <p class="text-gray-500 text-sm font-light leading-relaxed text-justify">Shaping the future of
+                            energy through meticulous planning and policy development. My work focuses on achieving a
+                            low-carbon energy future while balancing system stability and affordability, driving
+                            long-term change to ensure that businesses and industries are effectively supported during
+                            the transition towards a sustainable energy future.</p>
                     </div>
                 </div>
 
                 <!-- Project 2 -->
-                <div class="project-card group relative bg-gray-900/20 rounded-[2.5rem] overflow-hidden border border-white/5 flex flex-col" data-category="Energy Modelling">
+                <div class="project-card group relative bg-gray-900/20 rounded-[2.5rem] overflow-hidden border border-white/5 flex flex-col"
+                    data-category="Energy Modelling">
                     <div class="relative aspect-[16/10] overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Energy Modelling">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                            alt="Energy Modelling">
                     </div>
                     <div class="p-10 relative">
-                        <span class="text-blue-500 text-[10px] font-black uppercase tracking-[0.2em] mb-4 block leading-tight">Energy Modelling</span>
+                        <span
+                            class="text-blue-500 text-[10px] font-black uppercase tracking-[0.2em] mb-4 block leading-tight">Energy
+                            Modelling</span>
                         <h3 class="text-2xl font-bold mb-4">Strategic Energy Pathway Modelling</h3>
-                        <p class="text-gray-500 text-sm font-light leading-relaxed text-justify">Directed scenario-based modeling for long-term energy master plans and developed machine learning models to forecast wholesale electricity and reserve prices using real-time data streams for operational deployment.</p>
+                        <p class="text-gray-500 text-sm font-light leading-relaxed text-justify">Directed scenario-based
+                            modeling for long-term energy master plans and developed machine learning models to forecast
+                            wholesale electricity and reserve prices using real-time data streams for operational
+                            deployment.</p>
                     </div>
                 </div>
 
                 <!-- Project 3 -->
-                <div class="project-card group relative bg-gray-900/20 rounded-[2.5rem] overflow-hidden border border-white/5 flex flex-col" data-category="AI Algorithms and Patents">
+                <div class="project-card group relative bg-gray-900/20 rounded-[2.5rem] overflow-hidden border border-white/5 flex flex-col"
+                    data-category="AI Algorithms and Patents">
                     <div class="relative aspect-[16/10] overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="AI & Patents">
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                            alt="AI & Patents">
                     </div>
                     <div class="p-10 relative">
-                        <span class="text-blue-500 text-[10px] font-black uppercase tracking-[0.2em] mb-4 block leading-tight">AI Algorithms and Patents</span>
+                        <span
+                            class="text-blue-500 text-[10px] font-black uppercase tracking-[0.2em] mb-4 block leading-tight">AI
+                            Algorithms and Patents</span>
                         <h3 class="text-2xl font-bold mb-4">Patented Cloud-AI Infrastructure</h3>
                         <div class="text-gray-500 text-sm font-light leading-relaxed text-justify space-y-4">
-                            <p>Utilized a diverse array of machine learning and deep learning methodologies—ranging from supervised ensemble methods to advanced transformer-based architectures and reinforcement learning—to drive predictive modeling and cross-sector optimization.</p>
-                            <p>Lead inventor of specialized AI and IoT patents focusing on virtual power plant aggregation, energy trading platforms, and cloud-enabled edge computing solutions for infrastructure anomaly detection and predictive maintenance.</p>
+                            <p>Utilized a diverse array of machine learning and deep learning methodologies—ranging from
+                                supervised ensemble methods to advanced transformer-based architectures and
+                                reinforcement learning—to drive predictive modeling and cross-sector optimization.</p>
+                            <p>Lead inventor of specialized AI and IoT patents focusing on virtual power plant
+                                aggregation, energy trading platforms, and cloud-enabled edge computing solutions for
+                                infrastructure anomaly detection and predictive maintenance.</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project 4 -->
-                <div class="project-card group relative bg-gray-900/20 rounded-[2.5rem] overflow-hidden border border-white/5 flex flex-col" data-category="Agentic AI">
+                <div class="project-card group relative bg-gray-900/20 rounded-[2.5rem] overflow-hidden border border-white/5 flex flex-col"
+                    data-category="Agentic AI">
                     <div class="relative aspect-[16/10] overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Agentic AI">
+                        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                            alt="Agentic AI">
                     </div>
                     <div class="p-10 relative">
-                        <span class="text-blue-500 text-[10px] font-black uppercase tracking-[0.2em] mb-4 block leading-tight">Agentic AI</span>
+                        <span
+                            class="text-blue-500 text-[10px] font-black uppercase tracking-[0.2em] mb-4 block leading-tight">Agentic
+                            AI</span>
                         <h3 class="text-2xl font-bold mb-4">Agentic AI & Vibe Coding</h3>
-                        <p class="text-gray-500 text-sm font-light leading-relaxed text-justify">Building autonomous systems leveraging LLMs and Agentic tools like Codex and Cursor. Passionate about 'Vibe Coding'—the shift towards intent-driven development to accelerate practical innovation and broaden technology's societal benefit.</p>
+                        <p class="text-gray-500 text-sm font-light leading-relaxed text-justify">Building autonomous
+                            systems leveraging LLMs and Agentic tools like Codex and Cursor. Passionate about 'Vibe
+                            Coding'—the shift towards intent-driven development to accelerate practical innovation and
+                            broaden technology's societal benefit.</p>
                     </div>
                 </div>
             </div>
@@ -237,20 +311,24 @@
             <div class="max-w-2xl mb-16">
                 <h2 class="text-5xl md:text-6xl font-black mb-6 tracking-tighter">Collaboration</h2>
                 <p class="text-gray-400 text-lg font-light leading-relaxed">
-                    Interested in working together on energy modeling, policy development, or AI innovation? I'm always open to discussing new opportunities and collaborative projects.
+                    Interested in working together on energy modeling, policy development, or AI innovation? I'm always
+                    open to discussing new opportunities and collaborative projects.
                 </p>
             </div>
-            
+
             <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-gray-900/50 p-10 rounded-[2.5rem] border border-white/5 hover:border-blue-500/30 transition-colors">
+                <div
+                    class="bg-gray-900/50 p-10 rounded-[2.5rem] border border-white/5 hover:border-blue-500/30 transition-colors">
                     <i data-lucide="handshake" class="w-10 h-10 text-blue-400 mb-6"></i>
                     <h3 class="text-2xl font-bold mb-4">Partnerships</h3>
                     <p class="text-gray-500 text-sm leading-relaxed">Seeking opportunities to collaborate directly with agencies, corporate partners, and research institutes to develop forward-thinking, sustainable solutions.</p>
                 </div>
-                <div class="bg-gray-900/50 p-10 rounded-[2.5rem] border border-white/5 hover:border-blue-500/30 transition-colors">
+                <div
+                    class="bg-gray-900/50 p-10 rounded-[2.5rem] border border-white/5 hover:border-blue-500/30 transition-colors">
                     <i data-lucide="lightbulb" class="w-10 h-10 text-blue-400 mb-6"></i>
                     <h3 class="text-2xl font-bold mb-4">Consulting</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed">Providing strategic insights and technical expertise on applying AI and data analytics to the energy sector.</p>
+                    <p class="text-gray-500 text-sm leading-relaxed">Providing strategic insights and technical
+                        expertise on applying AI and data analytics to the energy sector.</p>
                 </div>
             </div>
         </div>
@@ -262,20 +340,24 @@
             <div class="flex flex-col md:flex-row justify-between items-center gap-12">
                 <div class="text-center md:text-left">
                     <h2 class="text-3xl font-black mb-2 tracking-tighter uppercase">SAI'S PAGE</h2>
-                    <p class="text-gray-600 text-xs font-bold tracking-widest uppercase italic text-justify">Supporting sound decision-making and the responsible application of technology.</p>
+                    <p class="text-gray-600 text-xs font-bold tracking-widest uppercase italic text-justify">Supporting
+                        sound decision-making and the responsible application of technology.</p>
                 </div>
                 <div class="flex items-center space-x-4">
-                    <button onclick="copyEmail(event)" class="p-5 bg-white/5 rounded-2xl hover:bg-white/10 transition-all border border-white/5 relative group">
+                    <button onclick="copyEmail(event)"
+                        class="p-5 bg-white/5 rounded-2xl hover:bg-white/10 transition-all border border-white/5 relative group">
                         <i data-lucide="mail" class="w-5 h-5" id="footer-mail-icon"></i>
                         <i data-lucide="check" class="w-5 h-5 hidden text-blue-400" id="footer-check-icon"></i>
-                        <div id="footer-toast" class="hidden absolute left-1/2 -translate-x-1/2 -top-12 px-3 py-1.5 bg-blue-600 text-white text-[10px] font-bold rounded-lg whitespace-nowrap">
+                        <div id="footer-toast"
+                            class="hidden absolute left-1/2 -translate-x-1/2 -top-12 px-3 py-1.5 bg-blue-600 text-white text-[10px] font-bold rounded-lg whitespace-nowrap">
                             ruisha.4379@gmail.com
                         </div>
                     </button>
                 </div>
             </div>
             <div class="mt-12 pt-12 border-t border-white/5 text-center md:text-left">
-                <p class="text-gray-600 text-[10px] tracking-widest uppercase">© 2024 Built by Sai. All Rights Reserved.</p>
+                <p class="text-gray-600 text-[10px] tracking-widest uppercase">© 2024 Built by Sai. All Rights Reserved.
+                </p>
             </div>
         </div>
     </footer>
@@ -320,12 +402,12 @@
             const footerMailIcon = document.getElementById('footer-mail-icon');
             const footerCheckIcon = document.getElementById('footer-check-icon');
 
-            if(toast) {
+            if (toast) {
                 toast.classList.remove('hidden');
                 setTimeout(() => toast.classList.add('hidden'), 3000);
             }
 
-            if(footerToast) {
+            if (footerToast) {
                 footerToast.classList.remove('hidden');
                 footerMailIcon.classList.add('hidden');
                 footerCheckIcon.classList.remove('hidden');
@@ -368,4 +450,5 @@
         }
     </script>
 </body>
+
 </html>
